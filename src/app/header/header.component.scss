@@ -1,0 +1,36 @@
+.title {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.myImage {
+    width: 40%;
+}
+
+.myTitle {
+    min-width: 533px;
+    display: flex;
+    align-items: center;
+
+    span {
+        max-height: 31px;
+        padding-left: 4px;
+        font-size: 44px;
+        height: 100%;
+        transform: rotate(-90deg);
+    }
+}
+
+.name-and-title {
+    line-height: 60px;
+}
+
+.vectorForm1 {
+    position: absolute;
+    left: 0px;
+}
