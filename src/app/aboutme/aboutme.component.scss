@@ -1,0 +1,42 @@
+.about-me {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+
+    .about-me-paragraph {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+
+        p {
+            margin-left: 30px;
+        }
+    }
+}
+
+.about-me-image {
+    position: relative;
+
+    img {
+max-width: 400px;
+        border: 3px solid #1CDAE6
+        ;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        width: 80px;
+        height: 2px;
+        background-color: #1CDAE6;
+        position: absolute;
+        top: calc(50% - 2px)
+
+
+    }
+}

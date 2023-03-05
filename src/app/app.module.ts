@@ -9,6 +9,7 @@ import { ContactlinksComponent } from './contactlinks/contactlinks.component';
 import { HeaderComponent } from './header/header.component';
 import { TemplateProjectComponent } from './template-project/template-project.component';
 import { ContactformComponent } from './contactform/contactform.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactformComponent } from './contactform/contactform.component';
     ContactlinksComponent,
     HeaderComponent,
     TemplateProjectComponent,
-    ContactformComponent
+    ContactformComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,
