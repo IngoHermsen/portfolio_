@@ -29,7 +29,7 @@ export class ContactformComponent {
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);
 
-    fetch('https://f0153156@ingo-hermsen.developerakademie.net/_sendphp/send_mail.php',
+    fetch('https://ingo-hermsen.developerakademie.net/_sendphp/send_mail.php',
       {
         method: 'POST',
         body: formData

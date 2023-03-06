@@ -4,7 +4,7 @@ body {
      font-family: 'Poppins';
      color: white;
      margin: 0px;
-     padding: 20px 400px 0px 400px;
+     padding-top: 20px;
      background-color: #141D2F;
      overflow-x: hidden;
 }
@@ -46,7 +46,8 @@ button {
 // content
 
 .content-container {
-     display: flex;
+     max-width: 1200px;
+     margin: 0px auto 0px auto;
 }
 
 // buttons
@@ -93,15 +94,14 @@ button {
 /* default and hover color */
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
      color: red !important;
- }
- 
- /* focused color */
- .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+}
+
+/* focused color */
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
      color: green !important;
- }
- 
- /* floating label color */
+}
+
+/* floating label color */
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
      color: green !important;
- }
-
+}

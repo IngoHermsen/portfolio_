@@ -1,3 +1,9 @@
 .contact-content {
     display: flex;
+    column-gap: 80px;
+}
+
+.contact-form {
+    min-width: 35%;
+    max-width: 500px;
 }

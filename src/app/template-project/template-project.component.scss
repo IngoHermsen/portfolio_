@@ -20,8 +20,14 @@
     .link-buttons {
         display: flex;
         justify-content: flex-start;
-        column-gap: 85px;
+        column-gap: 40px;
         margin-top: 40px;
+        flex-wrap: nowrap;
+
+        button {
+            width: 155px
+        }
+
     }
 }
 
