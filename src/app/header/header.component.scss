@@ -12,12 +12,20 @@
     width: 40%;
 }
 
+.title-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .myTitle {
     min-width: 533px;
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
 
     span {
+        
         max-height: 31px;
         padding-left: 4px;
         font-size: 44px;

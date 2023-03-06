@@ -3,40 +3,43 @@
     display: flex;
     justify-content: space-between;
 
-    .about-me-paragraph {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
+
+    .about-me-text {
+        max-width: 50%;
+
+        .about-me-paragraph {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+            p {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    .about-me-image {
+        position: relative;
+        margin-left: 40px;
 
         img {
-            height: 50px;
-            width: 50px;
+            max-width: 400px;
+            border: 3px solid #1CDAE6;
+            border-radius: 50%;
         }
 
-        p {
-            margin-left: 30px;
+        &::after {
+            content: '';
+            width: 80px;
+            height: 2px;
+            background-color: #1CDAE6;
+            position: absolute;
+            top: calc(50% - 2px)
         }
-    }
-}
-
-.about-me-image {
-    position: relative;
-
-    img {
-max-width: 400px;
-        border: 3px solid #1CDAE6
-        ;
-        border-radius: 50%;
-    }
-
-    &::after {
-        content: '';
-        width: 80px;
-        height: 2px;
-        background-color: #1CDAE6;
-        position: absolute;
-        top: calc(50% - 2px)
-
-
     }
 }

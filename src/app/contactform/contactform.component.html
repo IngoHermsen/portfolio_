@@ -1,1 +1,21 @@
-<p>contactform works!</p>
+<form class="contact-form" (submit)="sendMail()" #myForm>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Your name</mat-label>
+            <input name="name" matInput #nameField>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Your email</mat-label>
+            <input matInput #mailField>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Your message</mat-label>
+            <textarea name="message" matInput #messageField></textarea>
+        </mat-form-field>
+    </p>
+    <button class="blue-button" #sendButton>Send message</button>
+</form>

@@ -1,28 +1,107 @@
 // main
 
 body {
-    font-family: 'Poppins';
-    color: white;
-    margin: 0px;
-    padding: 20px 450px 0px 450px;
-    background-color: rgb(2, 2, 29);
-    overflow-x: hidden;
+     font-family: 'Poppins';
+     color: white;
+     margin: 0px;
+     padding: 20px 400px 0px 400px;
+     background-color: #141D2F;
+     overflow-x: hidden;
 }
 
-a {  
+a {
      color: unset;
      text-decoration: unset;
-     margin-left: 20px;
 }
 
-h1 { 
+h1 {
      font-size: 60px;
      margin: 0px;
 }
 
-h2 { 
+h2 {
      font-weight: 300;
-     font-size: 41px;
+     font-size: 40px;
      margin: 0px;
      color: rgb(72, 12, 237)
 }
+
+h3 {
+     font-size: 32px;
+}
+
+button {
+     font-family: unset;
+     font-size: 25px;
+     font-weight: 300px;
+     color: white;
+     padding: 10px 25px 10px 25px;
+     border-radius: 8px;
+
+     &:hover {
+          cursor: pointer;
+     }
+}
+
+// content
+
+.content-container {
+     display: flex;
+}
+
+// buttons
+
+
+.blue-button {
+     background-color: #00BEE8;
+
+     &:hover {
+          background-color: #48d1f0
+     }
+
+}
+
+.live-test-button {
+     background-color: #4B47FF;
+
+     &:hover {
+          background-color: #7472f7
+     }
+}
+
+.github-link-button {
+     background-color: transparent;
+     border: 1px solid #00BEE8;
+
+     &:hover {
+          background-color: #2fc1e2;
+
+     }
+}
+
+.jsdoc-link-button {
+     background-color: transparent;
+     border: 1px solid #00BEE8;
+
+     &:hover {
+          background-color: #2fc1e2;
+
+     }
+}
+
+
+/* default and hover color */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+     color: red !important;
+ }
+ 
+ /* focused color */
+ .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+     color: green !important;
+ }
+ 
+ /* floating label color */
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+     color: green !important;
+ }
+

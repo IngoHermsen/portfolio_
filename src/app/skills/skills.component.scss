@@ -1,0 +1,44 @@
+.content-container {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+
+    .skill-collection {
+        max-width: 700px;
+        display: flex;
+        column-gap: 80px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+
+        .skill {
+            width: 90px;
+
+            * {
+                display: flex;
+                justify-content: center;
+            }
+
+            span {
+                padding-top: 10px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .skill-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 40%;
+        margin-left: 30px;
+        text-align: right;
+
+
+        span {
+            margin-bottom: 40px;
+        }
+    }
+
+}

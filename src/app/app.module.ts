@@ -10,6 +10,13 @@ import { HeaderComponent } from './header/header.component';
 import { TemplateProjectComponent } from './template-project/template-project.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +26,20 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     HeaderComponent,
     TemplateProjectComponent,
     ContactformComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    SkillsComponent,
+    PortfolioComponent,
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,54 @@
+.project {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 200px;
+
+    img {
+        max-width: 400px;
+    }
+
+    .project-description {
+        margin-left: 120px;
+
+        >h3 {
+            color: #4B47FF;
+            margin-bottom: 40px;
+        }
+    }
+
+    .link-buttons {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 85px;
+        margin-top: 40px;
+    }
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .project-description {
+        margin-left: unset;
+        margin-right: 120px;
+        text-align: right;
+
+    }
+
+    .link-buttons {
+        justify-content: flex-end;
+    }
+}
+
+.used-techs {
+    color: #00BEE8;
+    margin-bottom: 24px;
+
+    span:not(:last-of-type) {
+        &::after {
+            content: ' | '
+        }
+
+    }
+}

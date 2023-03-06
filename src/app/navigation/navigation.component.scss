@@ -1,5 +1,30 @@
 .navigation {
     width: 100%;
     display: flex;
+    column-gap: 40px;
     justify-content: flex-end;
+
+    a {
+        position: relative;
+
+        &::after {
+            transition: all 90ms ease-in;
+            content: '';
+            width: 0px;
+            height: 1px;
+            background-color: white;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        &:hover {
+            &::after {
+                transition: all 175ms ease-in;
+                width: 100%;
+            }
+        }
+    }
+
+
 }

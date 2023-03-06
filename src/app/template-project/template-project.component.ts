@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-template-project',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./template-project.component.scss']
 })
 export class TemplateProjectComponent {
-
+  @Input() projects: any = [];
 }
