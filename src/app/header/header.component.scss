@@ -1,20 +1,31 @@
 .title {
-    position: relative;
+    margin-top: 40px;
     width: 100%;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
-
 .myImage {
-    width: 40%;
+    position: relative;
+    background-color: red;
+
+    img {
+        position: absolute;
+        max-height: 100%;
+        // top: 0px;
+        // left: 0px;
+        // right: 0px;
+        // bottom: 0px;
+        z-index: 1;
+    }
 }
 
 .title-content {
     display: flex;
     flex-direction: column;
+    align-self: center;
     align-items: center;
 }
 
@@ -25,7 +36,7 @@
     margin-bottom: 30px;
 
     span {
-        
+
         max-height: 31px;
         padding-left: 4px;
         font-size: 44px;
@@ -36,4 +47,8 @@
 
 .name-and-title {
     line-height: 60px;
+
+    h2 {
+        font-size: 41px;
+    }
 }

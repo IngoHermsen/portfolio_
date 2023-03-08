@@ -1,0 +1,16 @@
+.footer {
+    border-top: 3px solid #00BEE8;
+    background-color: #141D2F;
+
+    .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 250px;
+
+        .copyright {
+            font-size: 1.2rem
+        }
+
+    }
+}

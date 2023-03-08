@@ -1,10 +1,10 @@
 // main
 
 body {
+     position: relative;
      font-family: 'Poppins';
      color: white;
      margin: 0px;
-     padding-top: 20px;
      background-color: #141D2F;
      overflow-x: hidden;
 }
@@ -37,6 +37,7 @@ button {
      color: white;
      padding: 10px 25px 10px 25px;
      border-radius: 8px;
+     max-width: 250px;
 
      &:hover {
           cursor: pointer;
@@ -50,8 +51,18 @@ button {
      margin: 0px auto 0px auto;
 }
 
-// buttons
+.upper-link-icons {
+     margin-top: 120px;
+     display: flex;
+     column-gap: 40px;
+     align-items: center;
 
+     a:hover {
+          
+     }
+}
+
+// buttons
 
 .blue-button {
      background-color: #00BEE8;
@@ -70,21 +81,12 @@ button {
      }
 }
 
-.github-link-button {
+.github-link-button, .jsdoc-link-button {
      background-color: transparent;
      border: 1px solid #00BEE8;
 
      &:hover {
-          background-color: #2fc1e2;
-
-     }
-}
-
-.jsdoc-link-button {
-     background-color: transparent;
-     border: 1px solid #00BEE8;
-
-     &:hover {
+          transition: background-color 125ms ease-in;
           background-color: #2fc1e2;
 
      }

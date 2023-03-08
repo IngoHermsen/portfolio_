@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
-import { ContactlinksComponent } from './contactlinks/contactlinks.component';
 import { HeaderComponent } from './header/header.component';
 import { TemplateProjectComponent } from './template-project/template-project.component';
 import { ContactformComponent } from './contactform/contactform.component';
@@ -17,12 +16,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContacticonsComponent } from './contacticons/contacticons.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsbackgroundComponent } from './formsbackground/formsbackground.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    ContactlinksComponent,
     HeaderComponent,
     TemplateProjectComponent,
     ContactformComponent,
@@ -30,6 +31,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
+    ContacticonsComponent,
+    FooterComponent,
+    FormsbackgroundComponent,
 
   ],
   imports: [
