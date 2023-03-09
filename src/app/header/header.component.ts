@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, HostListener, ViewChild  } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Output() scrolledOut = new EventEmitter();
+  
+  @ViewChild('titleLogo') titleDiv!: ElementRef;
 
+  @HostListener('document:scroll', ['$event'])
+
+  public onViewportScroll() {
+    const windowHeight = window.innerHeight;
+    const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
+
+    if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
+
+    } else {
+
+    }
+  }
 }
