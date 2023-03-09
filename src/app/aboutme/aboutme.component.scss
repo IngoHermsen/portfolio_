@@ -35,11 +35,11 @@
 
         &::after {
             content: '';
-            width: 80px;
+            width: 50vw;
             height: 2px;
             background-color: #1CDAE6;
             position: absolute;
-            top: calc(50% - 2px)
+            top: 202px;
         }
     }
 }

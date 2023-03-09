@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ContacticonsComponent } from './contacticons/contacticons.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsbackgroundComponent } from './formsbackground/formsbackground.component';
+import { GototopComponent } from './gototop/gototop.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsbackgroundComponent } from './formsbackground/formsbackground.comp
     ContacticonsComponent,
     FooterComponent,
     FormsbackgroundComponent,
+    GototopComponent,
 
   ],
   imports: [

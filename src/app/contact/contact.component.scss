@@ -1,13 +1,42 @@
-.contact-content {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 80px;
-}
+.contact {
 
-.contact-text {
-    max-width: 50%;
-}
+    h1 {
+        position: relative;
 
-.contact-form {
-    min-width: 50%;
+        &::before {
+            content: '';
+            transform: translateX(-40vw);
+            width: 40vw;
+            height: 3px;
+            background-color: #7412f5;
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            z-index: 0;
+        }
+    }
+
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 80px;
+
+        .contact-text {
+            max-width: 50%;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .contact-form {
+            min-width: 50%;
+        }
+
+    }
+
+
+
+
+
 }

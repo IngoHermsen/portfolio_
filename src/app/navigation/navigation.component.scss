@@ -1,6 +1,11 @@
 .top-bar {
-    min-height: 48px;
+    position: fixed;
+    top: 0px;
+    padding-top: 24px;
+    height: 48px;
     width: 100%;
+    background-color: #141D2F;
+    z-index: 2;
 }
 
 .navigation {
