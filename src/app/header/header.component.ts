@@ -6,7 +6,8 @@ import { Component, ElementRef, EventEmitter, Output, HostListener, ViewChild  }
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Output() scrolledOut = new EventEmitter();
+  // @Output() scrolledOut = new EventEmitter();
+  scrolledOut = false;
   
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 
@@ -17,9 +18,9 @@ export class HeaderComponent {
     const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
 
     if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
-
+      this.scrolledOut = true;
     } else {
-
+      this.scrolledOut = false;
     }
   }
 }
