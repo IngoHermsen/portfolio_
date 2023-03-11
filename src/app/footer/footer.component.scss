@@ -8,9 +8,36 @@
         align-items: center;
         min-height: 250px;
 
+        >* {
+            width: 33%;
+        }
+
+        .name-logo {
+            font-size: 25px;
+        }
+
         .copyright {
             font-size: 1.2rem
         }
+
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer {
+        padding: 40px 0px;
+
+        .content-container {
+            flex-direction: column;
+        }
+        span, .name-logo{
+            text-align: center;
+        }
+
+        .imprint-link {
+            order: 4;
+        }
+
 
     }
 }

@@ -20,6 +20,7 @@ import { ContacticonsComponent } from './contacticons/contacticons.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsbackgroundComponent } from './formsbackground/formsbackground.component';
 import { GototopComponent } from './gototop/gototop.component';
+import { NameLogoComponent } from './name-logo/name-logo.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { GototopComponent } from './gototop/gototop.component';
     FooterComponent,
     FormsbackgroundComponent,
     GototopComponent,
+    NameLogoComponent,
 
   ],
   imports: [

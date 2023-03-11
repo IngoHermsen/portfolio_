@@ -1,12 +1,6 @@
 <div class="top-bar" [class.bottomLine]="showName">
     <nav class="navigation content-container">
-        <div>
-            <div *ngIf="showName" class="top-title">
-                <span>I</span>
-                <span class="ngLetters">ng</span>
-                <span>o Hermsen</span>
-            </div>
-        </div>
+        <app-name-logo *ngIf="showName" class="show-name"></app-name-logo>
         <div class="links">
             <a href="#">About Me</a>
             <a href="#skills">Skills</a>
