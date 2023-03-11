@@ -1,7 +1,17 @@
-<div class="top-bar">
+<div class="top-bar" [class.bottomLine]="showName">
     <nav class="navigation content-container">
-        <a href="#">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#">Portfolio</a>
+        <div>
+            <div *ngIf="showName" class="top-title">
+                <span>I</span>
+                <span class="ngLetters">ng</span>
+                <span>o Hermsen</span>
+            </div>
+        </div>
+        <div class="links">
+            <a href="#">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#">Portfolio</a>
+        </div>
+
     </nav>
 </div>

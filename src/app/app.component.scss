@@ -19,13 +19,39 @@
 
     &::before {
         content: '';
-        transform: translateX(-50vw);
-        width: 50vw;
+        transform: translateX(-52vw);
+        width: 52vw;
         height: 3px;
         background-color: #9747FF;
         position: absolute;
         top: 20px;
         left: -50px;
         z-index: 0;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .upper-link-icons {
+
+        &::before {
+            transform: unset;
+            width: 10vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .upper-link-icons {
+        justify-content: center;
+
+        a {
+            display: none;
+        }
+
+
+        &::before {
+            transform: unset;
+            width: 30vw;
+        }
     }
 }

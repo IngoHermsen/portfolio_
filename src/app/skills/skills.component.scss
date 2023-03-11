@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
 
+    .first-Button {
+        display: none;
+    }
+
     .skill-collection {
         max-width: 700px;
         display: flex;
@@ -56,5 +60,25 @@
             margin-bottom: 40px;
         }
     }
+}
 
+@media screen and (max-width: 850px) {
+    .content-container {
+        flex-direction: column-reverse;
+
+        .skill-collection {
+            padding-left: 40px;
+            align-self: center;
+        }
+
+        .first-button {
+            display: inline-block;
+            margin-top: 80px;
+            align-self: center;
+        }
+
+        .second-button {
+            display: none;
+        }
+    }
 }

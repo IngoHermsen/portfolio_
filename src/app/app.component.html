@@ -1,6 +1,6 @@
-<app-navigation></app-navigation>
+<app-navigation [showName]="titleScrolledOut"></app-navigation>
 <app-formsbackground></app-formsbackground>
-<app-header></app-header>
+<app-header (scrolledOutOfView)="setTitleView($event)"></app-header>
 <img class=vector-form1 src="./assets/img/forms/form_vector_1.svg" alt="form-vector-graphic">
 
 <div class="content-container upper-link-icons">

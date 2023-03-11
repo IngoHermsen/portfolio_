@@ -11,7 +11,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       usedTechs: ['Angular', 'Typescript', 'Firebase'],
-      description: 'Task manager inspired by the Kanban System. Create an d organize tasks using drag and drop functions, assign users and categories',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
       link: 'link',
       githubLink: 'link',
       jsDocLink: 'link',

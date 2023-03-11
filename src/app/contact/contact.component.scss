@@ -32,11 +32,29 @@
         .contact-form {
             min-width: 50%;
         }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        .contact-content {
+            flex-direction: column;
+
+            .contact-text {
+                max-width: unset;
+
+                p {
+                    margin-block-start: unset;
+                    margin-block-end: unset;
+                }
+            }
+
+            .contact-form {
+                margin-top: 50px;
+            }
+        }
+
 
     }
-
-
-
-
 
 }

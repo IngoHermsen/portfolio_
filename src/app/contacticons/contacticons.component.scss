@@ -2,21 +2,33 @@ div {
     display: flex;
     column-gap: 40px;
 
+    .links {
+
+        a {
+            img {
+                opacity: 0.7;
+                transition: all 175ms ease-out;
+                max-width: 40px;
+                border: 2px solid transparent;
+                border-radius: 100%;
+            }
+
+            &:hover>img {
+                border: 2px solid white;
+                opacity: 1;
+            }
+        }
+    }
 }
 
-a { 
-
-    img {
-        opacity: 0.7;
-        transition: all 175ms ease-out;
-        max-width: 40px;
-        border: 2px solid transparent;
-        border-radius: 100%;
-
+@media screen and (max-width: 1400px) {
+    .links {
+        padding-left: 120px;
     }
+}
 
-    &:hover>img {
-        border: 2px solid white;
-        opacity: 1;
+@media screen and (max-width: 1050px) {
+    .links {
+        padding-left: unset;
     }
 }

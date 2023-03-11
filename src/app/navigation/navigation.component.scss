@@ -1,40 +1,84 @@
 .top-bar {
     position: fixed;
     top: 0px;
-    padding-top: 24px;
-    height: 48px;
     width: 100%;
     background-color: #141D2F;
     z-index: 2;
 }
 
+.bottomLine {
+    border-bottom: 1px solid rgba(0, 190, 232, 0.2);
+}
+
+
 .navigation {
-    width: 100%;
+    position: relative;
+    height: 72px;
     display: flex;
-    column-gap: 40px;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
 
-    a {
-        position: relative;
+    
+      .top-title {
+        white-space: nowrap;
+        position: absolute;
+        font-size: 60px;
+        bottom: 12px;
+        top: 15px;
+        left: 35%;
+        font-weight: 700;
+        animation: toLeftCorner 500ms;
+        animation-fill-mode: forwards;
 
-        &::after {
-            transition: all 90ms ease-in;
-            content: '';
-            width: 0px;
-            height: 1px;
-            background-color: white;
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-        }
-
-        &:hover {
-            &::after {
-                transition: all 175ms ease-in;
-                width: 100%;
-            }
+        .ngLetters {
+            color: #00BEE8;
         }
     }
 
+    @keyframes toLeftCorner{
+        from {
+            opacity: 0.5;
+        }
+
+        to {
+            opacity: 1;
+            font-size: 30px;
+            right: unset; 
+            left: 30px;
+        }
+    }
+
+    .links {
+        display: flex;
+        column-gap: 40px;
+
+        a {
+            position: relative;
+
+            &::after {
+                transition: all 90ms ease-in;
+                content: '';
+                width: 0px;
+                height: 1px;
+                background-color: white;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+
+            &:hover {
+                &::after {
+                    transition: all 175ms ease-in;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .top-title {
+        left: 20%;
+    }
 
 }

@@ -1,4 +1,5 @@
-import { Component, ElementRef, EventEmitter, Output, HostListener, ViewChild  } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild  } from '@angular/core';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,10 @@ import { Component, ElementRef, EventEmitter, Output, HostListener, ViewChild  }
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  // @Output() scrolledOut = new EventEmitter();
-  scrolledOut = false;
+
+  @Output() scrolledOutOfView = new EventEmitter<boolean>;
+
+  // constructor(private scrollService: ScrollService) {}
   
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 
@@ -18,9 +21,9 @@ export class HeaderComponent {
     const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
 
     if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
-      this.scrolledOut = true;
+      this.scrolledOutOfView.emit(true);
     } else {
-      this.scrolledOut = false;
+      this.scrolledOutOfView.emit(false);
     }
   }
 }
