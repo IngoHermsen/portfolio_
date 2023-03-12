@@ -15,8 +15,12 @@ export class AppComponent implements OnInit {
   public screenWidth = window.innerWidth
 
   public toggleNavigationOverlay() {
+    let bodyElement =  document.getElementsByTagName('body')[0];
+    console.log(bodyElement)
     this.showOverlay = !this.showOverlay;
+    bodyElement.style.overflowY = this.showOverlay ? 'hidden' : 'scroll';
   }
+
   public setNameLogoView($event: any): void {
     this.titleScrolledOut = $event;
   }
