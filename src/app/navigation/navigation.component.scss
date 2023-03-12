@@ -1,6 +1,6 @@
 .top-bar {
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100%;
     background-color: #141D2F;
     z-index: 2;
@@ -10,7 +10,7 @@
     border-bottom: 1px solid rgba(0, 190, 232, 0.2);
 }
 
-.burger-icon:hover{
+.burger-icon:hover {
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: right;
 
-      .show-name {
+    .show-name {
         white-space: nowrap;
         position: absolute;
         font-size: 60px;
@@ -32,7 +32,7 @@
         animation-fill-mode: forwards;
     }
 
-    @keyframes toLeftCorner{
+    @keyframes toLeftCorner {
         from {
             opacity: 0.5;
         }
@@ -40,7 +40,7 @@
         to {
             opacity: 1;
             font-size: 30px;
-            right: unset; 
+            right: unset;
             left: 30px;
         }
     }

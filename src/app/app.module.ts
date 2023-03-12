@@ -22,6 +22,7 @@ import { FormsbackgroundComponent } from './formsbackground/formsbackground.comp
 import { GototopComponent } from './gototop/gototop.component';
 import { NameLogoComponent } from './name-logo/name-logo.component';
 import { NavLinksComponent } from './nav-links/nav-links.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NavLinksComponent } from './nav-links/nav-links.component';
     GototopComponent,
     NameLogoComponent,
     NavLinksComponent,
+    ImprintComponent,
 
   ],
   imports: [

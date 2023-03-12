@@ -21,6 +21,4 @@ export class AppComponent implements OnInit {
     if (this.screenWidth <= 650)
       this.showBurgerMenu = true;
   }
-
-
 }

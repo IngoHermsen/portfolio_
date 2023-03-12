@@ -6,15 +6,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+  bodyElement = document.getElementsByTagName('body')[0];
   showOverlayMenu: boolean = false;
 
   @Input() burgermenu: boolean = false;
   @Input() showName: boolean = false;
 
   toggleBurgerMenu() {
-    let bodyElement = document.getElementsByTagName('body')[0];
     this.showOverlayMenu = !this.showOverlayMenu;
-    bodyElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
+    this.bodyElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
   }
 
 }

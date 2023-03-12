@@ -16,6 +16,7 @@
 
         .skill {
             width: 90px;
+            align-self: flex-end;
 
             * {
                 display: flex;
@@ -41,6 +42,7 @@
 
 
         h1 {
+            scroll-margin-top: 72px;
             align-self: flex-end;
             position: relative;
 
@@ -81,4 +83,24 @@
             display: none;
         }
     }
+}
+
+@media screen and (max-width: 546px) {
+
+    .skill-collection {
+        padding-left: 10px !important;
+        column-gap: 50px !important;
+
+        .skill {
+            width: 60px;
+
+            img {
+                width: 50px;
+            }
+        }
+
+
+
+    }
+
 }
