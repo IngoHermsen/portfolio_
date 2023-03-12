@@ -47,12 +47,25 @@
 }
 
 .nav-overlay {
+    position: sticky;
+    height: calc(100vh - 72px);
     position: absolute;
-    top: 0;
+    top: 72px;
     right: 0;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
     background-color: grey;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .nav-links {
+        .links {
+            flex-direction: column;
+        }
+    }
 }
 
 @media screen and (max-width: 1050px) {
