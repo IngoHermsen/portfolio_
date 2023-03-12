@@ -1,5 +1,4 @@
 import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild  } from '@angular/core';
-import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +8,6 @@ import { ScrollService } from '../scroll.service';
 export class HeaderComponent {
 
   @Output() scrolledOutOfView = new EventEmitter<boolean>;
-
-  // constructor(private scrollService: ScrollService) {}
   
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 

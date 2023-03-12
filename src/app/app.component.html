@@ -1,6 +1,9 @@
-<app-navigation [showName]="titleScrolledOut"></app-navigation>
+<app-navigation [showName]="titleScrolledOut" [burgermenu]="showBurgerMenu" (burgerMenuClick)="toggleNavigationOverlay()"></app-navigation>
+<div class="nav-overlay" *ngIf="showOverlay">
+    <app-nav-links [vertical]="showBurgerMenu"></app-nav-links>
+</div>
 <app-formsbackground></app-formsbackground>
-<app-header (scrolledOutOfView)="setTitleView($event)"></app-header>
+<app-header (scrolledOutOfView)="setNameLogoView($event)"></app-header>
 <img class=vector-form1 src="./assets/img/forms/form_vector_1.svg" alt="form-vector-graphic">
 
 <div class="content-container upper-link-icons">

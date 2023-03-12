@@ -1,8 +1,11 @@
 // main
 
+html {
+     scroll-behavior: smooth;
+}
+
 body {
      scroll-margin-bottom: 72px;
-     scroll-behavior: smooth;
      position: relative;
      font-family: 'Poppins';
      color: white;
@@ -17,7 +20,6 @@ a {
 }
 
 h1 { 
-     scroll-behavior: smooth;
      font-size: 60px;
      margin: 0px;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ScrollService } from './scroll.service';
 
 @Component({
@@ -7,10 +7,24 @@ import { ScrollService } from './scroll.service';
   styleUrls: ['./app.component.scss'],
   providers: [ScrollService]
 })
-export class AppComponent {
-  titleScrolledOut = false;
+export class AppComponent implements OnInit {
+  showOverlay: boolean = false;
+  showBurgerMenu: boolean = false;
+  titleScrolledOut: boolean = false;
 
-  public setTitleView($event: any): void {
+  public screenWidth = window.innerWidth
+
+  public toggleNavigationOverlay() {
+    this.showOverlay = !this.showOverlay;
+  }
+  public setNameLogoView($event: any): void {
     this.titleScrolledOut = $event;
   }
+
+  ngOnInit(): void {
+    if (this.screenWidth <= 650)
+      this.showBurgerMenu = true;
+  }
+
+
 }

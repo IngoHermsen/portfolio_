@@ -1,11 +1,7 @@
 <div class="top-bar" [class.bottomLine]="showName">
     <nav class="navigation content-container">
         <app-name-logo *ngIf="showName" class="show-name"></app-name-logo>
-        <div class="links">
-            <a href="#">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#">Portfolio</a>
-        </div>
-
+        <app-nav-links *ngIf="!burgermenu"></app-nav-links>
+        <div class="burger-icon" *ngIf="burgermenu" (click)="toggleBurgerMenu()"><img src="../../assets/img/burger_menu_icon.png" alt="burger-icon"></div>
     </nav>
 </div>

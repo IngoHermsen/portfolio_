@@ -10,6 +10,9 @@
     border-bottom: 1px solid rgba(0, 190, 232, 0.2);
 }
 
+.burger-icon:hover{
+    cursor: pointer;
+}
 
 .navigation {
     position: relative;
@@ -41,34 +44,15 @@
             left: 30px;
         }
     }
+}
 
-    .links {
-        display: flex;
-        column-gap: 40px;
-        ;
-
-        a {
-            position: relative;
-
-            &::after {
-                transition: all 90ms ease-in;
-                content: '';
-                width: 0px;
-                height: 1px;
-                background-color: white;
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-            }
-
-            &:hover {
-                &::after {
-                    transition: all 175ms ease-in;
-                    width: 100%;
-                }
-            }
-        }
-    }
+.nav-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    background-color: grey;
 }
 
 @media screen and (max-width: 1050px) {
