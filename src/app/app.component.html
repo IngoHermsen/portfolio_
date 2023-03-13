@@ -1,17 +1,3 @@
-<app-navigation [showName]="titleScrolledOut" [burgermenu]="showBurgerMenu"></app-navigation>
-
-<app-formsbackground></app-formsbackground>
-<app-header (scrolledOutOfView)="setNameLogoView($event)"></app-header>
-<img class=vector-form1 src="./assets/img/forms/form_vector_1.svg" alt="form-vector-graphic">
-
-<div class="content-container upper-link-icons">
-    <app-contacticons></app-contacticons>
-    <a href="#">ingohermsen@gmail.com</a>
-</div>
-
-<app-aboutme></app-aboutme>
-<app-skills></app-skills>
-<app-portfolio></app-portfolio>
-<app-contact></app-contact>
-<app-gototop></app-gototop>
+<app-navigation [burgermenu]="showBurgerMenu"></app-navigation>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

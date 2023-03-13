@@ -1,6 +1,6 @@
 .title {
-    margin-top: 72px;
-    min-height: 450px;
+    margin-top: 0px;
+    min-height: 600px;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -12,7 +12,7 @@
     img {
         position: absolute;
         max-height: 120%;
-        z-index: 1;
+        z-index: -2;
     }
 }
 

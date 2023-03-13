@@ -1,17 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ScrollService {
-  titleScrolledOut = false;
 
-  titleOutOfView() {
-    this.titleScrolledOut = true;
-  }
+  titleScrolledOut = new Subject<boolean>();
 
-  titleInView() {
-    this.titleScrolledOut = false;
+  titleInView(value: boolean) {
+    this.titleScrolledOut.next(!value);
   }
 
   constructor() { }

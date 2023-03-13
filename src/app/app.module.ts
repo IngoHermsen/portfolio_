@@ -23,6 +23,7 @@ import { GototopComponent } from './gototop/gototop.component';
 import { NameLogoComponent } from './name-logo/name-logo.component';
 import { NavLinksComponent } from './nav-links/nav-links.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ImprintComponent } from './imprint/imprint.component';
     NameLogoComponent,
     NavLinksComponent,
     ImprintComponent,
+    MainComponent,
 
   ],
   imports: [

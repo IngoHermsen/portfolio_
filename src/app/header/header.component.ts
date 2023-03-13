@@ -1,14 +1,15 @@
-import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild  } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+
 })
 export class HeaderComponent {
+  constructor(private scrollService: ScrollService) { }
 
-  @Output() scrolledOutOfView = new EventEmitter<boolean>;
-  
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 
   @HostListener('document:scroll', ['$event'])
@@ -18,9 +19,10 @@ export class HeaderComponent {
     const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
 
     if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
-      this.scrolledOutOfView.emit(true);
+      this.scrollService.titleInView(true);
     } else {
-      this.scrolledOutOfView.emit(false);
+      this.scrollService.titleInView(false);
     }
   }
+
 }
