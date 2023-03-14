@@ -3,6 +3,8 @@
 html {
      scroll-behavior: smooth;
      margin-top: 72px;
+     overflow-x: hidden;
+
 }
 
 body {
@@ -12,7 +14,6 @@ body {
      color: white;
      margin: 0;
      background-color: #141D2F;
-     overflow-x: hidden;
 }
 
 a {  
