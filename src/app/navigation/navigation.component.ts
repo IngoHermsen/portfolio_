@@ -11,7 +11,7 @@ import { ScrollService } from '../scroll.service';
 export class NavigationComponent implements OnInit {
   constructor(private scrollService: ScrollService) {}
 
-  bodyElement = document.getElementsByTagName('body')[0];
+  htmlElement = document.getElementsByTagName('html')[0];
   showOverlayMenu: boolean = false;
 
   @Input() burgermenu: boolean = false;
@@ -25,7 +25,7 @@ export class NavigationComponent implements OnInit {
 
   toggleBurgerMenu() {
     this.showOverlayMenu = !this.showOverlayMenu;
-    this.bodyElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
+    this.htmlElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
   }
 
 }

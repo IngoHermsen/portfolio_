@@ -1,6 +1,6 @@
 <div class="links" [class.flex-column]="vertical">
-    <a routerLink="#about-me">About Me</a>
-    <a routerLink="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a *ngIf="vertical" href="#contact">Contact</a>
+    <a routerLink="/aboutme" (click)="scrollToSection('aboutme')">About Me</a>
+    <a routerLink="/skills" (click)="scrollToSection('skills')">Skills</a>
+    <a routerLink="/portfolio" (click)="scrollToSection('portfolio')">Portfolio</a>
+    <a routerLink="/contact" (click)="scrollToSection('contact')" *ngIf="vertical" >Contact</a>
 </div>

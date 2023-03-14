@@ -1,4 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
@@ -6,6 +7,9 @@ import { Subject } from 'rxjs/internal/Subject';
 })
 
 export class ScrollService {
+  constructor(
+    private router: Router  ,
+  ) { }
 
   titleScrolledOut = new Subject<boolean>();
 
@@ -13,5 +17,9 @@ export class ScrollService {
     this.titleScrolledOut.next(!value);
   }
 
-  constructor() { }
+  public jumpToSection(name: string) {
+    console.log(name)
+    this.router.navigate(['/main'], { fragment: name });
+  }
+
 }

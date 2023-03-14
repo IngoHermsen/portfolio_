@@ -24,6 +24,8 @@ import { NameLogoComponent } from './name-logo/name-logo.component';
 import { NavLinksComponent } from './nav-links/nav-links.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainComponent } from './main/main.component';
+import { Router, RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { MainComponent } from './main/main.component';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
