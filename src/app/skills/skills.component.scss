@@ -8,11 +8,12 @@
     }
 
     .skill-collection {
-        max-width: 700px;
-        display: flex;
-        column-gap: 80px;
-        row-gap: 50px;
-        flex-wrap: wrap;
+        min-width: 50%;
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        grid-row-gap: 80px;
+        grid-row: 180px;
+
 
         .skill {
             width: 90px;
@@ -37,6 +38,7 @@
         justify-content: right;
         align-items: center;
         min-width: 40%;
+        max-width: 40%;
         margin-left: 30px;
         text-align: right;
 
@@ -63,6 +65,17 @@
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .content-container {
+
+        .skill-collection {
+            grid-template-columns: repeat(3, 180px);
+            min-width: 40%;
+        }
+    }
+}
+
+
 @media screen and (max-width: 850px) {
     .content-container {
         flex-direction: column-reverse;
@@ -70,6 +83,11 @@
         .skill-collection {
             padding-left: 40px;
             align-self: center;
+        }
+
+        .skill-text {
+            max-width: 100%;
+            min-width: unset;
         }
 
         .first-button {
@@ -85,21 +103,54 @@
 }
 
 @media screen and (max-width: 546px) {
+    .content-container {
 
-    .skill-collection {
-        padding-left: 10px !important;
-        column-gap: 50px !important;
+        .skill-collection {
+            padding-left: 20px;
+            max-width: 100%;
+            grid-template-columns: repeat(3, 150px) !important;
+        }
+    }
+}
 
-        .skill {
-            width: 60px;
+@media screen and (max-width: 480px) {
+    .content-container {
 
-            img {
-                width: 50px;
+        .skill-collection {
+            padding-left: 0px;
+            max-width: 100%;
+            grid-template-columns: repeat(3, 120px) !important;
+            justify-content: center;
+
+            .skill {
+                width: unset;
             }
+
         }
 
+    }
+}
 
+@media screen and (max-width: 360px) {
+    .content-container {
+
+        .skill-collection {
+            padding-left: 0px;
+            max-width: 100%;
+            grid-template-columns: repeat(3, 100px) !important;
+            justify-content: center;
+
+            .skill {
+                img {
+                    max-width: 40px;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
+
+        }
 
     }
-
 }
