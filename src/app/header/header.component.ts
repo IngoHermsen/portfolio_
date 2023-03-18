@@ -8,7 +8,16 @@ import { ScrollService } from '../scroll.service';
 
 })
 export class HeaderComponent {
-  constructor(private scrollService: ScrollService) { }
+  windowWidth = window.innerWidth;
+  smallImage: boolean = false;
+
+  constructor(private scrollService: ScrollService) { 
+    if (this.windowWidth <= 600) {
+      console.log(this.windowWidth);
+      console.log(this.smallImage)
+      this.smallImage = true;
+    }
+  }
 
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 
