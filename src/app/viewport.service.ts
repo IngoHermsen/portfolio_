@@ -6,12 +6,16 @@ import { Subject } from 'rxjs/internal/Subject';
   providedIn: 'root'
 })
 
-export class ScrollService {
-  constructor(
-    private router: Router  ,
-  ) { }
+export class ViewportService {
+  constructor(private router: Router) { }
 
+  viewportWidth = window.innerWidth;
+  smallScreenWidth = false;
   titleScrolledOut = new Subject<boolean>();
+
+  setSmallScreenWidth(value: boolean) {
+    this.smallScreenWidth = value;
+  }
 
   titleInView(value: boolean) {
     this.titleScrolledOut.next(!value);

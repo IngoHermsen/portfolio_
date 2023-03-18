@@ -25,6 +25,7 @@ import { NavLinksComponent } from './nav-links/nav-links.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainComponent } from './main/main.component';
 import { Router, RouterModule } from '@angular/router';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { Router, RouterModule } from '@angular/router';
     NavLinksComponent,
     ImprintComponent,
     MainComponent,
+    DataprotectionComponent,
 
   ],
   imports: [

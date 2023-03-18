@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ScrollService } from './scroll.service';
+import { ViewportService } from './viewport.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [ScrollService]
+  providers: [ViewportService]
 })
 export class AppComponent implements OnInit {
   constructor(
     private router: Router,
-  ) { }
+  ) { 
+
+
+  }
   showBurgerMenu: boolean = false;
   titleScrolledOut: boolean = false;
 

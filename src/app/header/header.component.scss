@@ -157,7 +157,7 @@
 
 @media screen and (max-width: 550px) {
     .content-container {
-        height: 620px;
+        height: 666px;
 
         .my-Image {
             align-items: flex-start;
@@ -193,6 +193,10 @@
             .me-image {
                 max-width: 150vw;
             }
+        }
+
+        .title-content {
+            margin-top: 16px;
         }
     }
 }

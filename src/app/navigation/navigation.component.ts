@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ScrollService } from '../scroll.service';
+import { ViewportService } from '../viewport.service';
 
 
 @Component({
@@ -9,18 +9,25 @@ import { ScrollService } from '../scroll.service';
 })
 
 export class NavigationComponent implements OnInit {
-  constructor(private scrollService: ScrollService) {}
+  constructor(private viewportService: ViewportService) { }
 
+  screenWidth = window.innerWidth;
+  showName: boolean = false;
   htmlElement = document.getElementsByTagName('html')[0];
   showOverlayMenu: boolean = false;
 
   @Input() burgermenu: boolean = false;
-  @Input() showName: boolean = false;
+  @Input() toggleName: boolean = false;
+
 
   ngOnInit(): void {
-    this.scrollService.titleScrolledOut.subscribe((value) => {
-      this.showName = !value;
-    });
+    if (this.screenWidth <= 600) {
+      this.showName = true;
+    } else {
+      this.viewportService.titleScrolledOut.subscribe((value) => {
+        this.toggleName = !value;
+      });
+    }
   }
 
   toggleBurgerMenu() {

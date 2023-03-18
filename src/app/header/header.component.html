@@ -1,9 +1,9 @@
 <div class="wrapper">
     <div class="content-container">
         <div class="my-Image">
-            <img *ngIf="smallImage" class="me-image" src="/assets/img/me_small.png" alt="me_image">
-            <img *ngIf="!smallImage" class="me-image" src="/assets/img/me.png" alt="me_image">
-            <img *ngIf="!smallImage" class="me-image-overlay" src="/assets/img/me_overlay.png" alt="me_image">
+            <img *ngIf="useSmallProfileImage" class="me-image" src="/assets/img/me_small.png" alt="me_image">
+            <img *ngIf="!useSmallProfileImage" class="me-image" src="/assets/img/me.png" alt="me_image">
+            <img *ngIf="!useSmallProfileImage" class="me-image-overlay" src="/assets/img/me_overlay.png" alt="me_image">
             <img class="vector-form1" src="./assets/img/forms/form_vector_1.svg" alt="form-vector-graphic">
         </div>
         <div class="title-content" #titleLogo>

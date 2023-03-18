@@ -1,5 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
-import { ScrollService } from '../scroll.service';
+import { ViewportService } from '../viewport.service';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,12 @@ import { ScrollService } from '../scroll.service';
 })
 export class HeaderComponent {
   windowWidth = window.innerWidth;
-  smallImage: boolean = false;
+  useSmallProfileImage: boolean = false;
 
-  constructor(private scrollService: ScrollService) { 
+  constructor(private viewportService: ViewportService) { 
     if (this.windowWidth <= 600) {
-      console.log(this.windowWidth);
-      console.log(this.smallImage)
-      this.smallImage = true;
+      this.viewportService.setSmallScreenWidth(true);
+      this.useSmallProfileImage = true;
     }
   }
 
@@ -28,9 +28,9 @@ export class HeaderComponent {
     const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
 
     if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
-      this.scrollService.titleInView(true);
+      this.viewportService.titleInView(true);
     } else {
-      this.scrollService.titleInView(false);
+      this.viewportService.titleInView(false);
     }
   }
 

@@ -1,5 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
-import { ScrollService } from '../scroll.service';
+import { ViewportService } from '../viewport.service';
 
 @Component({
   selector: 'app-gototop',
@@ -7,9 +8,7 @@ import { ScrollService } from '../scroll.service';
   styleUrls: ['./gototop.component.scss']
 })
 export class GototopComponent {
-  constructor(
-    private scrollService: ScrollService
-  ) { }
+  constructor(private viewportService: ViewportService) { }
   imgSrc: string = '../../assets/img/icons/go_up_arrow_white.png';
 
   changeIconColor(color: string) {
@@ -17,6 +16,6 @@ export class GototopComponent {
   }
 
   jumpToTop() {
-    this.scrollService.jumpToSection('top')
+    this.viewportService.jumpToSection('top')
   }
 }

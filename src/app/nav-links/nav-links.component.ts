@@ -1,6 +1,5 @@
 import { Component, Input} from '@angular/core';
-import {  } from '@angular/router';
-import { ScrollService } from '../scroll.service';
+import { ViewportService } from '../viewport.service';
 
 @Component({
   selector: 'app-nav-links',
@@ -9,12 +8,12 @@ import { ScrollService } from '../scroll.service';
 })
 export class NavLinksComponent {
   constructor (
-    private scrollService: ScrollService
+    private viewportService: ViewportService
   ) {}
 
   @Input () vertical: boolean = false;
 
   scrollToSection(name: string) {
-    this.scrollService.jumpToSection(name);
+    this.viewportService.jumpToSection(name);
   }
 }
