@@ -24,7 +24,7 @@ export class PortfolioComponent {
       link: 'link',
       githubLink: 'link',
       jsDocLink: 'link',
-      imagePath: 'preview_join.png'
+      imagePath: 'preview_pokedex.png'
     },
     {
       title: 'El Pollo Loco',
@@ -33,7 +33,7 @@ export class PortfolioComponent {
       link: 'link',
       githubLink: 'link',
       jsDocLink: 'link',
-      imagePath: 'preview_join.png'
+      imagePath: 'preview_elpolloloco.png'
     }
 
   ];

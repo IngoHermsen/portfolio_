@@ -10,7 +10,7 @@
     justify-content: space-between;
 
 
-    .my-Image {
+    .profile-image-div {
         display: flex;
         align-items: flex-end;
 
@@ -20,7 +20,7 @@
             z-index: -3;
         }
 
-        .me-image-overlay {
+        .profile-image-overlay {
             z-index: -1;
         }
 
@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 1300px) {
     .content-container {
-        .my-Image {
+        .profile-image-div {
 
             img {
                 max-height: 90%;
@@ -77,7 +77,7 @@
         height: unset;
 
 
-        .my-Image {
+        .profile-image-div {
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -134,10 +134,10 @@
 }
 
 @media screen and (max-width: 600px) {
-    .my-Image {
+    .profile-image-div {
         max-height: 550px;
 
-        .me-image {
+        .profile-image {
             max-width: unset;
             max-height: 100%;
         }
@@ -159,7 +159,7 @@
     .content-container {
         height: 666px;
 
-        .my-Image {
+        .profile-image-div {
             align-items: flex-start;
 
         }
@@ -172,10 +172,10 @@
 
 @media screen and (max-width: 490px) {
     .content-container {
-        .my-Image {
+        .profile-image-div {
             height: 600px !important;
 
-            .me-image {
+            .profile-image {
                 max-width: 150vw;
             }
         }
@@ -186,11 +186,11 @@
     .content-container {
         padding: 0px 20px;
 
-        .my-Image {
+        .profile-image-div {
             height: 550px !important;
             align-items: flex-end;
 
-            .me-image {
+            .profile-image {
                 max-width: 150vw;
             }
         }

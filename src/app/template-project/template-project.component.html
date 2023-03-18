@@ -1,5 +1,7 @@
 <div *ngFor="let project of projects" class="project">
-    <img src="../../assets/img/{{ project.imagePath }}" alt="{{ project.imagePath }}">
+    <a href="'{{ project.link }}'" class="preview-image">
+        <img src="../../assets/img/{{ project.imagePath }}" alt="{{ project.imagePath }}">
+    </a>
     <div class="project-description">
         <h3 class="title">
             {{ project.title }}
@@ -8,11 +10,11 @@
             <span *ngFor="let tech of project.usedTechs">{{ tech }}</span>
         </div>
         <div class="description-text">{{ project.description }}</div>
-        
+
         <div class="link-buttons">
-            <a href='{{ project.link }}'><button class="live-test-button">Live test</button></a>            
-            <a href='{{ project.githubLink }}'><button class="github-link-button">Github</button></a>            
-            <a href='#'><button class="jsdoc-link-button">JSDoc</button></a>            
+            <a href='{{ project.link }}'><button class="live-test-button">Live test</button></a>
+            <a href='{{ project.githubLink }}'><button class="github-link-button">Github</button></a>
+            <a href='#'><button class="jsdoc-link-button">JSDoc</button></a>
         </div>
     </div>
 </div>

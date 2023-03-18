@@ -4,9 +4,15 @@
     align-items: flex-end;
     margin-bottom: 200px;
 
-    img {
-        max-width: 40%;
+    .preview-image {
+        width: 40%;
+
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
     }
+
 
     .project-description {
         max-width: 50%;
@@ -69,9 +75,10 @@
             max-width: 100%;
         }
 
-        img {
-            max-width: 60%;
+        .preview-image {
+            width: 60%;
         }
+
 
         .link-buttons {
             justify-content: center;
@@ -80,12 +87,12 @@
         &:nth-child(even) {
             flex-direction: column;
 
-            
-        .project-description {
-            margin-right: unset;
-            text-align: center;
 
-        }
+            .project-description {
+                margin-right: unset;
+                text-align: center;
+
+            }
 
             .link-buttons {
                 justify-content: center;
@@ -97,8 +104,8 @@
 
 @media screen and (max-width: 650px) {
 
-    img {
-        max-width: 80% !important;
+    .preview-image {
+        width: 80% !important;
     }
 }
 
@@ -108,8 +115,8 @@
         margin-bottom: 100px;
 
 
-        img {
-            max-width: 100% !important;
+        .preview-image {
+            width: 100% !important;
         }
 
         .link-buttons {
