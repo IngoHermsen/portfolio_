@@ -28,9 +28,8 @@
         .vector-form1 {
             position: absolute;
             left: 0px;
-            top: 150px;
-            min-width: 100%;
-            min-height: 1423px;
+            top: -100px;
+            min-height: 2000px;
             z-index: -2;
         }
 
@@ -54,12 +53,6 @@
                 max-width: 100%;
             }
         }
-    }
-}
-
-@media screen and (max-width: 1640px) {
-    .vector-form1 {
-        top: 120px !important;
     }
 }
 
