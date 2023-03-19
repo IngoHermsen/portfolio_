@@ -22,7 +22,6 @@ export class ViewportService {
   }
 
   public jumpToSection(name: string) {
-    console.log(name)
     this.router.navigate(['/main'], { fragment: name });
   }
 

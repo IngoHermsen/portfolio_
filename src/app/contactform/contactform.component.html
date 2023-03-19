@@ -1,21 +1,28 @@
-<form (submit)="sendMail()" #myForm>
+<form (submit)="validateForm()" #myForm>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Your name</mat-label>
-            <input name="name" matInput #nameField>
+            <input name="name" matInput #nameField required>
         </mat-form-field>
     </p>
+    <div class="alert"><span *ngIf="!nameValidation">Please enter a name</span></div>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Your email</mat-label>
-            <input matInput #mailField>
+            <input name="mail" matInput #mailField type="email" required>
         </mat-form-field>
     </p>
+    <div class="alert"><span *ngIf="!mailValidation">Please enter your mail adress</span></div>
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Your message</mat-label>
-            <textarea name="message" matInput #messageField></textarea>
+            <textarea name="message" matInput #messageField required></textarea>
         </mat-form-field>
     </p>
+    <div class="alert" ><span *ngIf="!messageValidation">Please enter a message</span></div>
+
     <button class="blue-button" #sendButton>Send message</button>
+    <div class="mail-sent-overlay" *ngIf="mailSent">
+        Mail sent!
+    </div>
 </form>
