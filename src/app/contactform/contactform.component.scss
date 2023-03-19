@@ -3,14 +3,23 @@ form {
     display: flex;
     flex-direction: column;
 
+    p {
+        margin-bottom: unset;
+    }
+
     .alert {
         color: #00BEE8;
         height: 20px;
+        margin-bottom: 12px;
     }
 
     button {
         margin-top: 8px;
         align-self: center;
+    }
+
+    textarea {
+        height: 100px !important;
     }
 
     mat-form-field {
@@ -21,26 +30,9 @@ form {
         display: none;
     }
 
-    
-
-    /* default and hover color */
-    ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-        color: red !important;
+    ::ng-deep .mdc-floating-label {
+        color: white !important;
     }
-
-    /* focused color */
-    ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-        color: green;
-    }
-
-    /* floating label color */
-    ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
-        color: green;
-    }
-}
-
-.low-opacity {
-    opacity: 0.2;
 }
 
 .mail-sent-overlay {

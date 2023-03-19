@@ -5,6 +5,7 @@ import { Component, ViewChild, ElementRef, EventEmitter } from '@angular/core';
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss']
 })
+
 export class ContactformComponent {
   mailSent: boolean = false;
   validation: boolean = false;
