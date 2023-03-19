@@ -24,7 +24,6 @@ export class ContactformComponent {
     messageField.disabled = true;
     sendButton.disabled = true;
 
-    console.log('i was here ')
     let formData = new FormData();
     formData.append('name', nameField.value);
     formData.append('message', messageField.value);

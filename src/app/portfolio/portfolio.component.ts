@@ -12,27 +12,27 @@ export class PortfolioComponent {
       title: 'Join',
       usedTechs: ['Angular', 'Typescript', 'Firebase'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
-      link: 'link',
-      githubLink: 'link',
-      jsDocLink: 'link',
+      link: 'https://ingo-hermsen.developerakademie.net/elpolloloco/',
+      githubLink: 'https://github.com/IngoHermsen/elPolloLoco/',
+      jsDocLink: 'https://ingo-hermsen.developerakademie.net/elpolloloco/out/',
       imagePath: 'preview_join.png'
     },
     {
       title: 'Pokedèx',
       usedTechs: ['Javascript', 'HTML', 'CSS', 'API'],
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      link: 'link',
-      githubLink: 'link',
-      jsDocLink: 'link',
+      link: 'https://ingo-hermsen.developerakademie.net/elpolloloco/',
+      githubLink: 'https://github.com/IngoHermsen/elPolloLoco/',
+      jsDocLink: 'https://ingo-hermsen.developerakademie.net/elpolloloco/out/',
       imagePath: 'preview_pokedex.png'
     },
     {
       title: 'El Pollo Loco',
       usedTechs: ['Javascript', 'HTML', 'CSS'],
       description: 'A simple Jump-and-Run-Game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
-      link: 'link',
-      githubLink: 'link',
-      jsDocLink: 'link',
+      link: 'https://ingo-hermsen.developerakademie.net/elpolloloco/',
+      githubLink: 'https://github.com/IngoHermsen/elPolloLoco/',
+      jsDocLink: 'https://ingo-hermsen.developerakademie.net/elpolloloco/out/',
       imagePath: 'preview_elpolloloco.png'
     }
 
