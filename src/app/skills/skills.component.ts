@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Skill } from 'src/models/skill';
+import { ViewportService } from '../viewport.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,6 +8,9 @@ import { Skill } from 'src/models/skill';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+constructor(public viewportService: ViewportService) {
+}
+
   skills: Skill[] = [
     {name: "Angular", iconpath: 'angular.png'},
     {name: "Typescript", iconpath: 'typescript.png'},

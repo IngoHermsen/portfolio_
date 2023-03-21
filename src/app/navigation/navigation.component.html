@@ -3,8 +3,8 @@
         <app-name-logo *ngIf="toggleName" class="toggle-name"></app-name-logo>
         <app-name-logo *ngIf="showName" class="show-name"></app-name-logo>
         <app-nav-links *ngIf="!burgermenu"></app-nav-links>
-        <div class="burger-icon" *ngIf="burgermenu" (click)="toggleBurgerMenu()"><img src="../../assets/img/burger_menu_icon.png" alt="burger-icon"></div>
-        <div class="nav-overlay" *ngIf="showOverlayMenu" (click)="toggleBurgerMenu()">
+        <div class="burger-icon" *ngIf="burgermenu" (click)="toggleBurgerMenu()"><img src="./assets/img/burger_menu_icon.png" alt="burger-icon"></div>
+        <div class="nav-overlay" *ngIf="showOverlayMenu && burgermenu" (click)="toggleBurgerMenu()">
             <app-nav-links [vertical]="burgermenu"></app-nav-links>
         </div>
     </nav>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { ViewportService } from '../viewport.service';
 
 
@@ -11,7 +11,6 @@ import { ViewportService } from '../viewport.service';
 export class NavigationComponent implements OnInit {
   constructor(private viewportService: ViewportService) { }
 
-  screenWidth = window.innerWidth;
   showName: boolean = false;
   htmlElement = document.getElementsByTagName('html')[0];
   showOverlayMenu: boolean = false;
@@ -21,12 +20,24 @@ export class NavigationComponent implements OnInit {
 
 
   ngOnInit(): void {
-    if (this.screenWidth <= 600) {
+    this.setNameLogo(window.innerWidth);
+
+    this.viewportService.innerWidth.subscribe((screenWidth) => {
+      this.setNameLogo(screenWidth);
+      this.burgermenu = screenWidth <= 600 ? true : false;
+    });
+
+    this.viewportService.titleIsOutOfView.subscribe((value) => {
+      this.toggleName = value;
+    });
+  }
+
+  setNameLogo(screenWidth: number) {
+    if (screenWidth <= 600) {
       this.showName = true;
+      this.toggleName = false;
     } else {
-      this.viewportService.titleScrolledOut.subscribe((value) => {
-        this.toggleName = !value;
-      });
+      this.showName = false;
     }
   }
 
@@ -34,5 +45,7 @@ export class NavigationComponent implements OnInit {
     this.showOverlayMenu = !this.showOverlayMenu;
     this.htmlElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
   }
+
+
 
 }

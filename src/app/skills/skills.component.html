@@ -1,14 +1,14 @@
 <div class="content-container">
     <a class="first-button" href="#"><button class="blue-button">Get in touch</button></a>
-    <div class="skill-collection">
+    <div  id="skills" class="skill-collection">
         <div *ngFor="let skill of skills" class="skill">
             <div><img src="./assets/img/icons/{{ skill.iconpath }}" alt="skill.iconpath"></div>
             <span>{{skill.name}}</span>
         </div>
     </div>
     <div class="skill-text">
-        <h1 id="skills">My skills</h1>
+        <h1>My skills</h1>
         <span>I have grown my frontend development skill that have allow me to create different real projects.</span>
-        <a class="second-button" href="#"><button class="blue-button">Get in touch</button></a>
+        <a class="second-button" routerLink="/contact" (click)="viewportService.jumpToSection('contact')"><button class="blue-button">Get in touch</button></a>
     </div>
 </div>

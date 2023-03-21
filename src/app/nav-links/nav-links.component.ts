@@ -13,7 +13,7 @@ export class NavLinksComponent {
 
   @Input () vertical: boolean = false;
 
-  scrollToSection(name: string) {
+  public scrollToSection(name: string) {
     this.viewportService.jumpToSection(name);
   }
 }

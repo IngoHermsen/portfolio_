@@ -1,5 +1,4 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, EventEmitter, HostListener, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, HostListener, Output, ViewChild } from '@angular/core';
 import { ViewportService } from '../viewport.service';
 
 @Component({
@@ -8,30 +7,32 @@ import { ViewportService } from '../viewport.service';
   styleUrls: ['./header.component.scss'],
 
 })
-export class HeaderComponent {
-  windowWidth = window.innerWidth;
-  useSmallProfileImage: boolean = false;
+export class HeaderComponent implements OnInit {
 
-  constructor(private viewportService: ViewportService) { 
-    if (this.windowWidth <= 600) {
-      this.viewportService.setSmallScreenWidth(true);
-      this.useSmallProfileImage = true;
-    }
+  smallScreenMode: boolean = false;
+
+  constructor(public viewportService: ViewportService) {
+  }
+
+  ngOnInit(): void {
+    this.smallScreenMode = window.innerWidth <= 600 ? true : false;
+    this.viewportService.innerWidth.subscribe((screenWidth) => {
+      this.smallScreenMode = screenWidth <= 600 ? true : false;
+    })
   }
 
   @ViewChild('titleLogo') titleDiv!: ElementRef;
 
   @HostListener('document:scroll', ['$event'])
-
   public onViewportScroll() {
     const windowHeight = window.innerHeight;
     const titleBoundingRect = this.titleDiv.nativeElement.getBoundingClientRect();
 
-    if (titleBoundingRect.top < 0 || titleBoundingRect.bottom > windowHeight) {
-      this.viewportService.titleInView(true);
+    if ((titleBoundingRect.top <= 0 || titleBoundingRect.bottom >= windowHeight) && !this.smallScreenMode) {
+      this.viewportService.titleIsOutOfView.next(true);
     } else {
-      this.viewportService.titleInView(false);
+      this.viewportService.titleIsOutOfView.next(false);
     }
   }
-
 }
+

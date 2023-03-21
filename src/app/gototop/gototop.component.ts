@@ -9,10 +9,10 @@ import { ViewportService } from '../viewport.service';
 })
 export class GototopComponent {
   constructor(private viewportService: ViewportService) { }
-  imgSrc: string = '../../assets/img/icons/go_up_arrow_white.png';
+  imgSrc: string = './assets/img/icons/go_up_arrow_white.png';
 
   changeIconColor(color: string) {
-    this.imgSrc = `../../assets/img/icons/go_up_arrow_${color}.png`
+    this.imgSrc = `./assets/img/icons/go_up_arrow_${color}.png`
   }
 
   jumpToTop() {
