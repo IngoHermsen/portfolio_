@@ -74,19 +74,24 @@
         top: 72px;
         right: 0;
         bottom: 0;
-        left: 0;
         background-color: grey;
         z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        animation: slide-in 175ms;
+        animation-fill-mode: forwards;
 
-        .nav-links {
-            .links {
-                flex-direction: column;
+        @keyframes slide-in {
+            from {
+                left: calc(100vw + 20px);
+            }
+            to {
+                left: 0px;
             }
         }
+
     }
 
     @media screen and (max-width: 1050px) {

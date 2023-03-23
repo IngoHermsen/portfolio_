@@ -1,14 +1,14 @@
 <div class="wrapper">
     <div class="content-container">
         <div class="profile-image-div">
-            <img *ngIf="smallScreenMode" class="profile-image" src="/assets/img/me_small.png" alt="me_image">
-            <img *ngIf="!smallScreenMode" class="profile-image" src="/assets/img/me.png" alt="me_image">
-            <img *ngIf="!smallScreenMode" class="profile-image-overlay" src="/assets/img/me_overlay.png" alt="me_image">
+            <img *ngIf="smallScreenMode" class="profile-image" src="./assets/img/me_small.png" alt="me_image">
+            <img *ngIf="!smallScreenMode" class="profile-image" src="./assets/img/me.png" alt="me_image">
+            <img *ngIf="!smallScreenMode" class="profile-image-overlay" src="./assets/img/me_overlay.png" alt="me_image">
             <img class="vector-form1" src="./assets/img/forms/form_vector_1.svg" alt="form-vector-graphic">
         </div>
         <div class="title-content" >
             <div class="my-Title">
-                <img #titleLogo src="../../assets/img/nameTitleMain.png" alt="Ingo Hermsen - Frontend Developer png">
+                <img #titleLogo src="./assets/img/nameTitleMain.png" alt="Ingo Hermsen - Frontend Developer png">
             </div>
             <a routerLink="/contact" (click)="viewportService.jumpToSection('contact')"><button class="blue-button">Let's talk!</button></a>
         </div>

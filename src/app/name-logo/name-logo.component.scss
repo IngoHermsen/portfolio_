@@ -1,7 +1,14 @@
 .name-logo {
+    font-size: 32px;
     font-weight: 700;
 
     .ngLetters {
         color: #00BEE8;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .name-logo {
+        font-size: 28px;
     }
 }

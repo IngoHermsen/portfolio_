@@ -17,7 +17,7 @@ export class ViewportService {
   titleIsOutOfView = new Subject<boolean>();
   
   public jumpToSection(name: string) {
-    this.router.navigate(['/main'], { fragment: name });
+    this.router.navigate(['/home'], { fragment: name });
   }
 
 }
