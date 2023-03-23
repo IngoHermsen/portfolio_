@@ -1,6 +1,6 @@
 <div class="top-bar" [class.bottomLine]="showName || toggleName">
     <nav class="navigation content-container" [class.hidden-scroll]="showOverlayMenu" >
-        <app-name-logo *ngIf="toggleName" class="toggle-name"></app-name-logo>
+        <a href="#" (click)="viewportService.jumpToSection('top')"><app-name-logo *ngIf="toggleName" class="toggle-name"></app-name-logo></a>
         <app-name-logo *ngIf="showName" class="show-name"></app-name-logo>
         <app-nav-links *ngIf="!burgermenu"></app-nav-links>
         <div class="burger-icon" *ngIf="burgermenu" (click)="toggleBurgerMenu()"><img src="./assets/img/burger_menu_icon.png" alt="burger-icon"></div>

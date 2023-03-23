@@ -6,6 +6,7 @@ import { MainComponent } from './main/main.component';
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
+  onSameUrlNavigation: 'reload',
   scrollOffset: [0, 64],
 };
 

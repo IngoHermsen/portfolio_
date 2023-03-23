@@ -4,6 +4,7 @@ export interface Project {
     description: string;
     link: string;
     githubLink: string;
+    jsDoc: boolean;
     jsDocLink: string;
     imagePath: string;
 }

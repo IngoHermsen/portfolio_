@@ -9,7 +9,7 @@ import { ViewportService } from '../viewport.service';
 })
 
 export class NavigationComponent implements OnInit {
-  constructor(private viewportService: ViewportService) { }
+  constructor(public viewportService: ViewportService) { }
 
   showName: boolean = false;
   htmlElement = document.getElementsByTagName('html')[0];
@@ -43,7 +43,9 @@ export class NavigationComponent implements OnInit {
 
   toggleBurgerMenu() {
     this.showOverlayMenu = !this.showOverlayMenu;
-    this.htmlElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
+    setTimeout(() => {
+      this.htmlElement.style.overflowY = this.showOverlayMenu ? 'hidden' : 'scroll';
+    }, 150)
   }
 
 

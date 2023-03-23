@@ -14,7 +14,7 @@
         <div class="link-buttons">
             <a href='{{ project.link }}' target="_blank"><button class="live-test-button">Live test</button></a>
             <a href='{{ project.githubLink }}' target="_blank"><button class="github-link-button">Github</button></a>
-            <a href='{{ project.jsDocLink }}' target="_blank"><button class="jsdoc-link-button">JSDoc</button></a>
+            <a href='{{ project.jsDocLink }}' *ngIf="project.jsDoc" target="_blank"><button class="jsdoc-link-button">JSDoc</button></a>
         </div>
     </div>
 </div>
